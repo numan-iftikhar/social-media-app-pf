@@ -574,3 +574,275 @@ header {
 
 /* facebook post 01 end */
 /* home center section end here */
+
+/* home right start */
+
+.home-right {
+  width: 25%;
+  overflow: hidden;
+}
+.home-right-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.event-friend,
+.create-page,
+.messenger {
+  background: var(--white);
+  box-shadow: 0 2px 5px 0 var(--shadow);
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.event {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  color: #1877f2;
+  margin-bottom: 12px;
+}
+.heading span {
+  font-size: 10px;
+  float: right;
+  font-weight: 600;
+  color: var(--gray);
+  cursor: pointer;
+}
+.event img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.event-date {
+  display: flex;
+  margin-bottom: 12px;
+}
+.event-date h3 {
+  color: #1877f2;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 10px;
+  background: var(--white);
+  padding: 6px;
+  box-shadow: 0 2px 5px 0 var(--shadow);
+  border-radius: 6px;
+}
+.event-date h3 b {
+  color: var(--black);
+  display: block;
+  text-transform: uppercase;
+}
+.event-date h4 {
+  color: var(--black);
+  font-size: 14px;
+}
+.event-date h4 span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+}
+.event button {
+  padding: 6px;
+  background: #1877f2;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 18px;
+  transition: 0.4s;
+}
+.event button:hover {
+  background: #115cbd;
+  cursor: pointer;
+}
+.event button i {
+  margin-right: 6px;
+}
+
+.event-friend hr {
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid var(--border);
+}
+
+.friend ul {
+  display: flex;
+  margin-bottom: 10px;
+}
+.friend ul li img {
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.friend ul li b {
+  color: var(--black);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.friend ul li p {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gray);
+}
+.friend ul li button {
+  background: #1877f2;
+  border: none;
+  padding: 3px 10px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.friend-remove {
+  background: var(--background) !important;
+  color: var(--black) !important;
+}
+
+.create-page ul li {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.create-page ul li .fa-circle-plus {
+  color: white;
+  padding: 10px;
+  background: #1877f2;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.create-page ul li h4 {
+  font-size: 14px;
+  color: var(--black);
+  margin-right: 95px;
+}
+.create-page ul li i {
+  color: var(--gray);
+}
+.create-page ul li img {
+  width: 100%;
+  border-radius: 10px;
+}
+.create-page ul li b {
+  font-size: 12px;
+}
+.create-page ul li button {
+  font-size: 12px;
+  border: none;
+  padding: 3px 10px;
+  background: #1877f2;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.create-page ul li:nth-child(3) {
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.create-page ul li b span {
+  display: block;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.messenger-search {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  position: relative;
+}
+.messenger-search .fa-user-group {
+  color: white;
+  padding: 10px;
+  background: #1877f2;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.messenger-search h4 {
+  font-size: 14px;
+  color: var(--black);
+  margin-right: 8px;
+}
+.messenger-search input {
+  padding: 3px 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background: var(--foreground);
+  color: var(--gray);
+}
+.messenger ul {
+  display: flex;
+  flex-direction: column;
+}
+.messenger ul li {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  align-items: center;
+  background: var(--foreground);
+  padding: 10px 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 var(--shadow);
+  position: relative;
+  transition: 0.4s;
+}
+.messenger ul li img {
+  width: 42px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.messenger ul li:hover {
+  box-shadow: 0 4px 6px 0 var(--shadow);
+}
+.messenger ul li b {
+  color: var(--black);
+  font-size: 14px;
+}
+.messenger ul li b span {
+  display: block;
+  color: var(--gray);
+  font-size: 10px;
+  position: relative;
+  margin-left: 15px;
+}
+.messenger ul li span::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #12da01;
+  position: absolute;
+  border-radius: 50px;
+  top: 4px;
+  left: -12px;
+}
+.messenger ul li:nth-child(2) span::before {
+  background: #ff9600;
+}
+.messenger ul li i {
+  color: #1877f2;
+  position: absolute;
+  right: 12px;
+  top: 35%;
+  background: white;
+  padding: 5px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px #95959561;
+}
+.messenger-search .fa-magnifying-glass {
+  position: absolute;
+  right: 6px;
+  font-size: 12px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* home right end */
