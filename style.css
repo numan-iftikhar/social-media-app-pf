@@ -17,3 +17,149 @@
   --shadow: #76767663;
   --border: #cfcfcf;
 }
+.dark-color {
+  --background: #222230;
+  --foreground: #42435c;
+  --white: #2b2c44;
+  --black: #eeecff;
+  --gray: #d5dfd5;
+  --shadow: #00000063;
+  --border: #3f4172;
+}
+
+.darkTheme.button-Active span {
+  margin-left: 16px;
+}
+
+body {
+  background: var(--background);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #3a78ffec;
+}
+button:focus,
+input:focus {
+  border: none;
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  color: var(--black);
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* header section style start here */
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-container {
+  width: 95%;
+  background: var(--white);
+  height: 100px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 0 var(--shadow);
+}
+.header-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 0 8px;
+  justify-content: space-between;
+}
+.logoBox {
+  width: 7%;
+}
+.logoBox img {
+  width: 60px;
+}
+.searchBox {
+  width: 38%;
+  position: relative;
+}
+.iconBox1 {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  border-right: 2px solid var(--border);
+}
+.iconBox2 {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  position: relative;
+}
+.searchBox input {
+  padding: 15px 45px 15px 15px;
+  border-radius: 50px;
+  width: 100%;
+  background: var(--foreground);
+  border: none;
+  box-shadow: 0 2px 5px 0 var(--shadow);
+  color: var(--black);
+}
+.searchBox i {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.searchBox i:hover {
+  color: #1877f2;
+}
+
+.iconBox1 i,
+.iconBox2 i {
+  font-size: 20px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  color: #769bcb;
+  transition: 0.4s;
+}
+.iconBox1 i:hover,
+.iconBox2 i:hover {
+  background: #1877f2;
+  color: #d1deec;
+  cursor: pointer;
+}
+.iconBox2 label {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.iconBox2 label img {
+  width: 100%;
+}
+.iconBox2 .fa-caret-down {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  top: 7px;
+}
+.iconBox2 .fa-caret-down:hover {
+  background: transparent;
+}
+
+/* header section style end here */
