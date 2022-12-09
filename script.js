@@ -7,6 +7,7 @@ searchBtn.addEventListener("click", () => {
   getPosts(searchApi);
 });
 
+// get posts
 const getPosts = async (API_URL) => {
   const res = await fetch(API_URL);
   const postsData = await res.json();
@@ -14,8 +15,7 @@ const getPosts = async (API_URL) => {
   const postsContainer = document.querySelector(".posts-container");
 
   // create post's HTML
-  postsData.posts.map((post) => {
-    postsCount++;
+  postsData.posts.map((post, index) => {
     const postDiv = document.createElement("div");
     const title = document.createElement("h3");
     const body = document.createElement("p");
@@ -31,6 +31,24 @@ const getPosts = async (API_URL) => {
     postDiv.appendChild(body);
 
     postsContainer.appendChild(postDiv);
+
+    // add comments to post
+    fetch(`https://dummyjson.com/comments/post/${index + 1}`)
+      .then((res) => res.json())
+      .then((commentsData) =>
+        commentsData.comments.map((data) => {
+          // create comment's HTML
+          const commentsDiv = document.createElement("div");
+          const comment = document.createElement("p");
+
+          commentsDiv.classList.add("comments");
+          comment.classList.add("comment");
+          //   console.log(data);
+          comment.innerText = data.body;
+          commentsDiv.appendChild(comment);
+          postDiv.appendChild(commentsDiv);
+        })
+      );
   });
 };
 

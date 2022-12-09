@@ -459,7 +459,12 @@ header {
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-
+.comment {
+  /* border: 1px solid; */
+  margin: 1rem;
+  color: gray;
+  border-bottom: 1px solid lightpink;
+}
 .post-images2 {
   width: 37%;
   overflow: hidden;
