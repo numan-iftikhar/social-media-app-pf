@@ -446,79 +446,20 @@ header {
 
 /* facebook post 01 start */
 
-.fb-post1 {
+.post {
   background: var(--white);
   box-shadow: 0 2px 5px 0 var(--shadow);
   border-radius: 20px;
   padding: 15px 20px;
   padding-bottom: 20px;
+  margin-bottom: 1rem;
 }
-.fb-post1-container {
-  display: flex;
-  flex-direction: column;
-}
-.fb-post1-header {
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--border);
-  padding-bottom: 8px;
-}
-.fb-post1-header ul {
-  display: flex;
-}
-.fb-post1-header ul li {
-  text-transform: uppercase;
-  padding: 5px 10px;
-  font-weight: 600;
-  color: var(--gray);
-  transition: 0.4s;
-  cursor: pointer;
-}
-.fb-post1-header ul li:hover {
-  color: #3d3e42;
-}
-.fb-post1-header .active {
-  color: var(--black);
-  border-bottom: 3px solid #1877f2;
-}
-.fb-p1-main {
-  display: flex;
-  flex-direction: column;
-}
+
 .post-title {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 15px 0;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
-.post-title img {
-  width: 50px;
-  border-radius: 50px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-.post-title ul {
-  width: 87%;
-  margin-bottom: 20px;
-}
-.post-title ul li span {
-  color: var(--gray);
-  font-weight: 400;
-  font-size: 14px;
-}
-.post-title p {
-  color: var(--gray);
-}
-.post-title p a {
-  color: #4575b3;
-}
-.post-images {
-  display: flex;
-  justify-content: space-between;
-}
-.post-images1 {
-  width: 60%;
-  overflow: hidden;
-}
+
 .post-images2 {
   width: 37%;
   overflow: hidden;
