@@ -16,6 +16,7 @@
   --gray: #6e6e6e;
   --shadow: #76767663;
   --border: #cfcfcf;
+  --darkBlue: #0002a1;
 }
 .dark-color {
   --background: #222230;
@@ -86,12 +87,10 @@ header {
 .logoBox {
   width: 7%;
 }
-.logoBox img {
-  width: 60px;
-}
 .searchBox {
-  width: 38%;
+  width: 52%;
   position: relative;
+  margin-left: 9rem;
 }
 .iconBox1 {
   width: 25%;
@@ -125,7 +124,7 @@ header {
   transition: 0.4s;
 }
 .searchBox i:hover {
-  color: #1877f2;
+  color: #0002a1;
 }
 
 .iconBox1 i,
@@ -139,7 +138,7 @@ header {
 }
 .iconBox1 i:hover,
 .iconBox2 i:hover {
-  background: #1877f2;
+  background: #0002a1;
   color: #d1deec;
   cursor: pointer;
 }
@@ -188,6 +187,7 @@ header {
   flex-direction: column;
   padding: 15px;
   margin-bottom: 20px;
+  height: fit-content;
 }
 
 .profile {
@@ -279,7 +279,7 @@ header {
   font-weight: 600;
 }
 .explore a:hover {
-  color: #1877f2;
+  color: #0002a1;
 }
 .explore a i {
   margin-right: 10px;
@@ -327,78 +327,137 @@ header {
   width: 50%;
   overflow: hidden;
 }
-.home-center .stories,
-.home-center .createPost {
-  background: var(--white);
-  box-shadow: 0 2px 5px 0 var(--shadow);
-  border-radius: 20px;
-  padding: 15px;
-  margin-bottom: 20px;
+.post {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  margin-top: 40px;
 }
-
-.stories-wrapper {
+.post-body {
+  border-bottom: 1px solid lightgoldenrodyellow;
+  padding-bottom: 10px;
+}
+.info {
+  width: 100%;
+  height: 60px;
   display: flex;
   justify-content: space-between;
-  height: 170px;
-  margin-bottom: 12px;
+  align-items: center;
+  padding: 0 20px;
 }
 
-.home-center .mini-headign {
-  color: #1877f2;
-  margin-bottom: 10px;
+.info .username {
+  width: auto;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px;
+  margin-left: 10px;
 }
-.single-stories {
-  width: 18%;
-  position: relative;
-  padding-top: 25px;
+
+.info .options {
+  height: 10px;
+  cursor: pointer;
 }
-.single-stories label {
-  width: 45px;
-  height: 45px;
-  background: #daeaff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  border-radius: 50px;
-  overflow: hidden;
-  border: 3px solid #1877f2;
+
+.info .user {
+  display: flex;
+  align-items: center;
 }
-.single-stories label img {
+
+.info .profile-pic {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  background: none;
+}
+
+.info .profile-pic img {
+  border: none;
+}
+
+.post-image {
   width: 100%;
-}
-.single-stories > div {
-  width: 100%;
-  overflow: hidden;
-  height: 100%;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 1px 6px 6px 0 var(--shadow);
-}
-.single-stories > div img {
-  width: 100%;
-  height: 100%;
+  height: 500px;
   object-fit: cover;
 }
-.single-stories > div b {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: white;
-  font-weight: 400;
-  text-shadow: 0 1px 8px black;
-}
-.single-stories > div i {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 25px;
-  color: white;
+
+.post-content {
+  width: 100%;
+  padding: 20px;
 }
 
+.likes {
+  font-weight: bold;
+}
+
+.description {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.description span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.post-time {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.comment-wrapper {
+  width: 100%;
+  height: 50px;
+  border-radius: 1px solid #dfdfdf;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-wrapper .icon {
+  height: 30px;
+}
+
+.comment-box {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.comment-btn,
+.action-btn {
+  width: 70px;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: rgb(0, 162, 255);
+  opacity: 0.5;
+}
+
+.reaction-wrapper {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin-top: -20px;
+  align-items: center;
+}
+
+.reaction-wrapper .icon {
+  height: 25px;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.reaction-wrapper .icon.save {
+  margin-left: auto;
+}
 /* createPost start */
 
 .post-text {
@@ -460,10 +519,33 @@ header {
   margin-bottom: 5px;
 }
 .comment {
-  /* border: 1px solid; */
-  margin: 1rem;
-  color: gray;
-  border-bottom: 1px solid lightpink;
+  border-bottom: 1px solid var(--background);
+  padding: 5px 0;
+}
+.comments {
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0 1rem 2rem;
+  background-color: var(--foreground);
+}
+
+.btn-delete,
+.btn-edit {
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+  color: white;
+  float: right;
+}
+
+.btn-delete {
+  background-color: rgb(228, 14, 14);
+}
+.btn-edit {
+  background-color: orange;
 }
 .post-images2 {
   width: 37%;
@@ -544,8 +626,24 @@ header {
   display: flex;
   flex-direction: column;
 }
+.comment-input {
+  width: 15rem;
+  outline: none;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+.add-comment-btn {
+  float: right;
+  background-color: white;
+  padding: 0.4rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 4rem;
+}
 .heading {
-  color: #1877f2;
+  color: #0002a1;
   margin-bottom: 12px;
 }
 .heading span {
@@ -565,7 +663,7 @@ header {
   margin-bottom: 12px;
 }
 .event-date h3 {
-  color: #1877f2;
+  color: #0002a1;
   text-align: center;
   line-height: 20px;
   margin-right: 10px;
@@ -591,7 +689,7 @@ header {
 }
 .event button {
   padding: 6px;
-  background: #1877f2;
+  background: #0002a1;
   color: white;
   border-radius: 6px;
   border: none;
@@ -633,7 +731,7 @@ header {
   color: var(--gray);
 }
 .friend ul li button {
-  background: #1877f2;
+  background: #0002a1;
   border: none;
   padding: 3px 10px;
   color: white;
@@ -655,7 +753,7 @@ header {
 .create-page ul li .fa-circle-plus {
   color: white;
   padding: 10px;
-  background: #1877f2;
+  background: #0002a1;
   border-radius: 10px;
   font-size: 20px;
   margin-right: 8px;
@@ -680,7 +778,7 @@ header {
   font-size: 12px;
   border: none;
   padding: 3px 10px;
-  background: #1877f2;
+  background: #0002a1;
   color: white;
   border-radius: 50px;
   cursor: pointer;
@@ -704,7 +802,7 @@ header {
 .messenger-search .fa-user-group {
   color: white;
   padding: 10px;
-  background: #1877f2;
+  background: #0002a1;
   border-radius: 10px;
   font-size: 20px;
   margin-right: 8px;
@@ -774,7 +872,7 @@ header {
   background: #ff9600;
 }
 .messenger ul li i {
-  color: #1877f2;
+  color: #0002a1;
   position: absolute;
   right: 12px;
   top: 35%;
