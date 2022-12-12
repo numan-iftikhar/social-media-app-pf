@@ -1,6 +1,19 @@
 let postsContainer = document.querySelector(".posts-container");
 const searchBox = document.querySelector(".search-box");
 const searchBtn = document.querySelector(".search-btn");
+const logoutBtn = document.querySelector(".logout-btn");
+
+/* ------------------------ logout ----------------------------- */
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("username");
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+  localStorage.removeItem("firstName");
+  localStorage.removeItem("lastName");
+
+  window.location.href = "./auth-page.html";
+});
 
 searchBtn.addEventListener("click", () => {
   postsContainer.innerHTML = "";
@@ -19,15 +32,11 @@ const getPosts = async (API_URL) => {
     const body = document.createElement("p");
     let reactionsDiv = document.createElement("div");
     let tagsDiv = document.createElement("div");
+
     reactionsDiv.innerHTML = `
+    <img style="width: 20px; margin-bottom: -5px;" src="images/like-button-icon.png" />
       <span>${post.reactions}</span>
-      <span>reactions</span>
     `;
-    // tagsDiv.innerHTML = `
-    //   ${post.tags.map((tag) => {
-    //     <span>tag</span>;
-    //   })}
-    // `;
     postDiv.classList.add("post");
     title.classList.add("post-title");
     body.classList.add("post-body");
@@ -69,16 +78,6 @@ const getPosts = async (API_URL) => {
           btnDelete.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
           btnDelete.classList.add("btn-delete");
           comment.appendChild(btnDelete);
-
-          // btnEdit.addEventListener("click", () => {
-          //   document
-          //     .querySelector(".add-comment-btn")
-          //     .addEventListener("click", () => {
-          //       commentsDiv = `<p class="comment">${
-          //         document.querySelector(".comment-input").value
-          //       }</p>`;
-          //     });
-          // });
 
           btnDelete.addEventListener("click", (e) => {
             e.target.parentElement.parentElement.remove();

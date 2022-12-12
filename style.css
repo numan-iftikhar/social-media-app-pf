@@ -143,14 +143,12 @@ header {
   cursor: pointer;
 }
 .iconBox2 label {
-  width: 45px;
-  height: 45px;
-  overflow: hidden;
-  border-radius: 50px;
+  margin-top: 5px;
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
-.iconBox2 label img {
-  width: 100%;
-}
+
 .iconBox2 .fa-caret-down {
   position: absolute;
   right: 0;
@@ -164,7 +162,9 @@ header {
 /* header section style end here */
 
 /* home section start here */
-
+.reactions {
+  color: var(--gray);
+}
 .home {
   display: flex;
   justify-content: center;
