@@ -15,6 +15,8 @@ logoutBtn.addEventListener("click", () => {
   window.location.href = "./auth-page.html";
 });
 
+/* ------------------------- search --------------------------------- */
+
 searchBtn.addEventListener("click", () => {
   postsContainer.innerHTML = "";
   const searchApi = `https://dummyjson.com/posts/search?q=${searchBox.value}`;
@@ -27,11 +29,12 @@ const getPosts = async (API_URL) => {
   const postsData = await res.json();
   // create post's HTML
   postsData.posts.map((post, index) => {
-    const postDiv = document.createElement("div");
-    const title = document.createElement("h3");
-    const body = document.createElement("p");
+    let postDiv = document.createElement("div");
+    let title = document.createElement("h3");
+    let body = document.createElement("p");
     let reactionsDiv = document.createElement("div");
     let tagsDiv = document.createElement("div");
+    let inputComment = document.create;
 
     reactionsDiv.innerHTML = `
     <img style="width: 20px; margin-bottom: -5px;" src="images/like-button-icon.png" />
@@ -54,7 +57,9 @@ const getPosts = async (API_URL) => {
     postsContainer.appendChild(postDiv);
 
     let commentsDiv = document.createElement("div");
-    // add comments to post
+
+    /* -------------------- fetch comments of respective posts ----------------- */
+
     fetch(`https://dummyjson.com/comments/post/${index + 1}`)
       .then((res) => res.json())
       .then((commentsData) =>
@@ -78,6 +83,8 @@ const getPosts = async (API_URL) => {
           btnDelete.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
           btnDelete.classList.add("btn-delete");
           comment.appendChild(btnDelete);
+
+          /* ------------------- delete comment ---------------------- */
 
           btnDelete.addEventListener("click", (e) => {
             e.target.parentElement.parentElement.remove();

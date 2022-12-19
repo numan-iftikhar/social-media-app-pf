@@ -3,7 +3,6 @@ const submitBtn = document.querySelector(".submit-btn");
 const userName = document.querySelector("#user-name");
 const password = document.querySelector("#password");
 
-// console.log(form);
 const validateUser = async (e) => {
   e.preventDefault();
   const res = await fetch("https://dummyjson.com/auth/login", {
@@ -21,13 +20,8 @@ const validateUser = async (e) => {
   localStorage.setItem("email", JSON.stringify(data.email));
   localStorage.setItem("firstName", JSON.stringify(data.firstName));
   localStorage.setItem("lastName", JSON.stringify(data.lastName));
-  console.log(data);
   if (data.message != "Invalid credentials")
     window.location.href = "./index.html";
 };
 
 submitBtn.addEventListener("click", validateUser);
-
-// fetch("https://dummyjson.com/posts")
-//   .then((res) => res.json())
-//   .then(console.log);
