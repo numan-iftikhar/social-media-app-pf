@@ -24,6 +24,13 @@ body {
 #chk {
   display: none;
 }
+.pass-hint {
+  padding: 0 10px;
+  position: fixed;
+  top: 1px;
+  left: 1px;
+  color: white;
+}
 .login {
   position: relative;
   width: 100%;

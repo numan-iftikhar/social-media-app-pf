@@ -458,50 +458,6 @@ header {
 .reaction-wrapper .icon.save {
   margin-left: auto;
 }
-/* createPost start */
-
-.post-text {
-  width: 100%;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.post-text img {
-  width: 40px;
-  border-radius: 50px;
-  position: absolute;
-  left: 10px;
-  top: 30px;
-}
-.post-text input {
-  padding: 20px 20px 20px 60px;
-  width: 100%;
-  background: var(--foreground);
-  border: none;
-  height: 100px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px 0 var(--shadow);
-  color: var(--black);
-}
-
-.post-icon {
-  display: flex;
-  align-items: center;
-}
-.post-icon a {
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 10px;
-  font-size: 14px;
-  color: #262626;
-  font-weight: 500;
-}
-.post-icon a i {
-  padding: 5px;
-  border-radius: 5px;
-  color: #fff;
-}
-/* createPost end */
 
 /* facebook post 01 start */
 
