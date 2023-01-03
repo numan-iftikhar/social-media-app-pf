@@ -1,3 +1,11 @@
+Vue.createApp({
+  data() {
+    return {
+      hello: "hello world!",
+    };
+  },
+}).mount("#body");
+
 let postsContainer = document.querySelector(".posts-container");
 const searchBox = document.querySelector(".search-box");
 const searchBtn = document.querySelector(".search-btn");
